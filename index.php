@@ -5,19 +5,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include './includes/db-config.php';
-include './includes/functions.php';
+
 ?>
 <html>
-    <head>
-        <title>Simple PHP mysql Crud </title>
-        <link href="css/style.css">
-        <script src="js/custom.js"></script>
-    </head>
     
+        <?php include 'header.php';?>
     <body>
         <h1>Simple Crud Operation in PHP mysql</h1>
-        <div class="app-form">
+<!--        <div class="app-form">
             <form name="appform" method="post" action="submithandler.php" enctype="multipart/form-data">
                 <input type="text" name="username" placeholder="Name">
                 <input type="text" name="useremail" placeholder="Email">
@@ -26,7 +21,8 @@ include './includes/functions.php';
                 <input type="hidden" name="add" placeholder="" class="addrecord">
                 <input type="submit" value="submit">
             </form>
-        </div>
+        </div>-->
+<a href="add.php">Add User</a>
         <div class="showdata">
             <table>
                 <tr>
@@ -46,7 +42,7 @@ include './includes/functions.php';
      echo " <td>".$row{'email'}."</td>";
      echo " <td>".$row{'location'}."</td>";
      echo " <td>".$row{'phone'}."</td>";
-      echo " <td><a href=submithandler.php?edit=".$row{'id'}.">Edit</a> || <a href=submithandler.php?delete=".$row{'id'}.">delete</a></td>";
+      echo " <td><a href=submithandler.php?view=".$row{'id'}.">view</a> || <a href=submithandler.php?edit=".$row{'id'}.">Edit</a> || <a href=submithandler.php?delete=".$row{'id'}.">delete</a></td>";
       echo "</tr>";
   
 }

@@ -19,3 +19,12 @@ function getRecords(){
 
     
 }
+//user by id
+
+function getUserById($id){
+    
+    $query= "select * from user_info where id =$id";
+    $result = mysql_query($query);
+    return $result;
+    
+}
