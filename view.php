@@ -8,7 +8,7 @@
 ?>
 <table>
  <?php 
-    while ($row = mysql_fetch_array($userData)) {
+    while ($row = mysqli_fetch_array($userData)) {
         ?>
     <tr><td>Id </td> <td><?php echo $row{'id'} ?></td></tr>
     <tr><td>Name </td> <td><?php echo  $row{'name'} ?></td></tr>

@@ -34,8 +34,8 @@
                       <th>Action</th>
                 </tr>
                
-                         <?php $data = getRecords();
-    while ($row = mysql_fetch_array($data)) {
+                         <?php $data = getRecords($con);
+    while ($row = mysqli_fetch_array($data)) {
         echo "<tr>";
     echo " <td>".$row{'id'}."</td>";
      echo " <td>".$row{'name'}."</td>";

@@ -12,5 +12,8 @@
         <script src="js/custom.js"></script>
         <?php 
         include './includes/db-config.php';
-        include './includes/functions.php';?>
+        include './includes/functions.php';
+        
+        
+        ?>
     </head>

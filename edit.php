@@ -11,7 +11,7 @@
             <form name="appform" method="post" action="submithandler.php" enctype="multipart/form-data">
                 <table>
  <?php 
-    while ($row = mysql_fetch_array($userData)) {
+    while ($row = mysqli_fetch_array($userData)) {
         ?>
     <tr><td>Id </td> <td><?php echo $row{'id'} ?></td></tr>
     <tr><td>Name </td> <td><input type="text" name="username" placeholder="Name" value="<?php echo  $row{'name'} ?>"></td></tr>
