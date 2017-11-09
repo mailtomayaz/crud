@@ -15,7 +15,20 @@
     <tr><td>Email </td> <td><?php echo  $row{'email'} ?></td></tr>
     <tr><td>Location </td> <td><?php echo $row{'location'} ?></td></tr>
     <tr><td>Phone </td> <td><?php echo $row{'phone'} ?></td></tr>
-    <tr><td>Name </td> <td><?php echo $row{'name'} ?></td></tr>
+    <tr><td>Resume 
+        <?php     
+            if($row['resume'] != '')
+    {
+        
+        ?>
+            <a href="uploads/<?php echo $row{'resume'} ?>"><?php  echo $row{'resume'} ?></a>
+            <?php
+        
+        }else{ 
+            echo "N/A";
+            };
+            ?>
+             </td> </tr>
     <tr><td><a href="submithandler.php?edit= <?php echo $row{'id'} ?>">Edit</a> </td> <td><a href="/crud">close</a></td></tr>
 
 

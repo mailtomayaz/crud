@@ -13,19 +13,23 @@
     <body>
 
 <div class="app-form" >
-            <form name="appform" method="post" action="submithandler.php" enctype="multipart/form-data">
+    <div class="error"></div>
+    <form name="appform" id="appform" method="post" action="submithandler.php" enctype="multipart/form-data">
                 <table >
                     <tr><td>
-                <input type="text" name="username" placeholder="Name">
+                            <input type="text" id="username" name="username" placeholder="Name">
                  </td></tr>
                       <tr><td>
-                <input type="text" name="useremail" placeholder="Email">
+                              <input type="text" id="useremail" name="useremail" placeholder="Email">
                  </td></tr>
                       <tr><td>
-                <input type="text" name="userlocation" placeholder="Location">
+                              <input type="text" id="userlocation" name="userlocation" placeholder="Location">
                  </td></tr>
                       <tr><td>
-                <input type="text" name="userphone" placeholder="Phone">
+                              <input type="text" id="userphone" name="userphone" placeholder="Phone">
+                 </td></tr>
+                      <tr><td>
+                              <input type="file" id="userFileUpload" name="userFileUpload" placeholder="Upload File">
                  </td></tr>
                       <tr><td>
                 <input type="hidden" name="add" placeholder="" class="addrecord">

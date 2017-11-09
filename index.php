@@ -11,7 +11,7 @@
     
         <?php include 'header.php';?>
     <body>
-        <h1>Simple Crud Operation in PHP mysql</h1>
+  
 <!--        <div class="app-form">
             <form name="appform" method="post" action="submithandler.php" enctype="multipart/form-data">
                 <input type="text" name="username" placeholder="Name">
@@ -22,15 +22,21 @@
                 <input type="submit" value="submit">
             </form>
         </div>-->
-<a href="add.php">Add User</a>
-        <div class="showdata">
-            <table>
+<div class="container">
+    <h3 class="">Simple Crud Operation in PHP mysql</h3>
+    <div class="row>">
+        <a  type='button' class=" btn btn-primary" href="add.php">Add User</a>
+</div>
+    <div class="row">
+<div class="showdata">
+    <table class="table">
                 <tr>
                     <th>No.</th>
                      <th>Name</th>
                       <th>Email</th>
                       <th>location</th>
                       <th>phone</th>
+                      <th>Resume</th>
                       <th>Action</th>
                 </tr>
                
@@ -42,6 +48,7 @@
      echo " <td>".$row{'email'}."</td>";
      echo " <td>".$row{'location'}."</td>";
      echo " <td>".$row{'phone'}."</td>";
+      echo " <td><a href=uploads/".$row{'resume'}.">".$row{'resume'}."</a> </td>";
       echo " <td><a href=submithandler.php?view=".$row{'id'}.">view</a> || <a href=submithandler.php?edit=".$row{'id'}.">Edit</a> || <a href=submithandler.php?delete=".$row{'id'}.">delete</a></td>";
       echo "</tr>";
   
@@ -52,5 +59,7 @@
             </table>
        
         </div>
+    </div>
+</div>
     </body>
 </html>

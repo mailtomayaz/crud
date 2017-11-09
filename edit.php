@@ -18,6 +18,7 @@
     <tr><td>Email </td> <td><input type="text" name="useremail" placeholder="Email" value="<?php echo  $row{'email'} ?>" ></td></tr>
     <tr><td>Location </td> <td><input type="text" name="userlocation" placeholder="Location" value="<?php echo $row{'location'} ?>"></td></tr>
     <tr><td>Phone </td> <td>  <input type="text" name="userphone" placeholder="Phone" value="<?php echo $row{'phone'} ?>"></td></tr>
+    <tr><td>Resume </td> <td>  <input type="file" name="userFileUpload" placeholder="userFileUpload" value=""/><?php echo $row{'resume'} ?></td></tr>
     
     <tr><td> <input type="submit" value="Update"> </td> <td><a href="/crud">close</a></td></tr>
      <input type="hidden" name="update" placeholder="" class="addrecord">

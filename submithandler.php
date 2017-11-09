@@ -5,6 +5,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+//include required file
 include 'includes/db-config.php';
 include 'includes/functions.php';
 include 'includes/requesthandler.php';
@@ -13,12 +15,21 @@ include 'includes/requesthandler.php';
 
 //
 //echo $str = "insert into user_info (name,email,phone,location) values('$username','$useremail',$userphone,'$userlocation')";
-//
+//add user information into database
 if (isset($_POST['add'])){
- $add = addUser($con,$_POST);
-
+    // save file attachment if exist
+    $add = '';
+    $ifFile='';
+    if(isset($_FILES)){
+        $ifFile = getFileUpload($con,$_FILES);
+    
+    }
+   $add = addUser($con,$_POST,$ifFile);
 if($add){
     echo "Recored added";
+    echo "<a href='/crud'> Go back </\a>";
+}else {
+    echo "There is problem saving Record";
     echo "<a href='/crud'> Go back </\a>";
 }
 }
@@ -27,8 +38,22 @@ if($add){
 if (isset($_POST['update'])){
 
 //echo "update user_info set name='$username',email='$useremail',phone='$userphone',location='$userlocation' where id=$id ";
-$update = getUpdateUser($con,$_POST);
-
+  
+    //print_r($_FILES);
+     // die('stop');
+    if($_FILES['userFileUpload']['size']!= 0 ){
+      
+        $ifFile = getFileUpload($con,$_FILES);
+       if($ifFile){
+           //echo "add file name";
+               $update = getUpdateUser($con,$_POST,$ifFile);
+       }  
+    }else{
+    
+        $update = getUpdateUser($con,$_POST);
+    }
+    
+    //$update = getUpdateUser($con,$_POST);
 
 if($update){
     echo "Record Updated";
@@ -46,9 +71,9 @@ if(isset($_GET['view'])){
 //edit records
 if(isset($_GET['edit'])){
     // edit record with ID
-     $id= $_GET['edit'];
+   $id= $_GET['edit'];
    $userData = getUserById($con,$id);
-    include 'edit.php';
+   include 'edit.php';
 }
   //delete records
 if(isset($_GET['delete'])){
