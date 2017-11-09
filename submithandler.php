@@ -6,10 +6,7 @@
  * and open the template in the editor.
  */
 
-//include required file
-include 'includes/db-config.php';
 include 'includes/functions.php';
-include 'includes/requesthandler.php';
 
 //$add = $_POST['add'];
 

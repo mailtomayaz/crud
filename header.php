@@ -8,6 +8,7 @@
 ?>
   <head>
         <title>Simple PHP mysql Crud </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css"/>
          <link rel="stylesheet" href="css/bootstrap.min.css"/>
         
@@ -16,9 +17,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script src="js/custom.js"></script>
         <?php 
-        include './includes/db-config.php';
         include './includes/functions.php';
-        
-        
         ?>
     </head>

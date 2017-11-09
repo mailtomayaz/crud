@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+include 'includes/db-config.php';
 function getRecords($con){
     
     $query= 'select * from user_info';
